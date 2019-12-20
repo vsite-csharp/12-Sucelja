@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5F6EDAD-6E05-4F7E-8BFA-5C9466A81EAC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vsite.CSharp.Sučelja.Testovi</RootNamespace>
+    <AssemblyName>Testovi</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.2.0.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.2.0.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ImplementacijeIstoimenihČlanovaRazličitihSučelja.cs" />
+    <Compile Include="ConsoleTest.cs" />
+    <Compile Include="DefinicijaImplementacijaSučelja.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ImplementacijaSučelja.cs" />
+    <Compile Include="ImplicitnaEksplicitnaPretvorba.cs" />
+    <Compile Include="SmisaoSučelja.cs" />
+    <Compile Include="VirtualniČlanovi.cs" />
+    <Compile Include="TipskiSigurnaImplementacija.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DefinicijaImplementacijaSučelja\DefinicijaImplementacijaSučelja.csproj">
+      <Project>{35ad9a77-5c10-48a2-b170-fdb5af2b1d42}</Project>
+      <Name>DefinicijaImplementacijaSučelja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImplementacijaIstoimenihČlanovaIzRazličitihSučelja\ImplementacijaIstoimenihČlanovaIzRazličitihSučelja.csproj">
+      <Project>{a2b13ebc-f55f-4a9d-a090-00fb88714f2d}</Project>
+      <Name>ImplementacijaIstoimenihČlanovaIzRazličitihSučelja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImplementacijaSučelja\ImplementacijaSučelja.csproj">
+      <Project>{16cce0ae-4001-4655-8283-20e908777226}</Project>
+      <Name>ImplementacijaSučelja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImplicitnaEksplicitnaPretvorba\ImplicitnaEksplicitnaPretvorba.csproj">
+      <Project>{a7aea1d6-5c08-404d-91c1-665079b419ae}</Project>
+      <Name>ImplicitnaEksplicitnaPretvorba</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmisaoSučelja\SmisaoSučelja.csproj">
+      <Project>{e63f8fa2-7635-4808-8378-8ffd70cf7100}</Project>
+      <Name>SmisaoSučelja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TipskiSigurneImplementacije\TipskiSigurneImplementacije.csproj">
+      <Project>{8f7d8832-281e-476a-9a13-55a908e75b79}</Project>
+      <Name>TipskiSigurneImplementacije</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VirtualniČlanovi\VirtualniČlanovi.csproj">
+      <Project>{57198bd4-2684-4aa4-b611-b754ea9224c6}</Project>
+      <Name>VirtualniČlanovi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.targets')" />
+</Project>

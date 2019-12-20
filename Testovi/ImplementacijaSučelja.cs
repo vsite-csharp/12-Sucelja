@@ -1,0 +1,27 @@
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+
+namespace Vsite.CSharp.Sučelja.Testovi
+{
+    [TestClass]
+    public class ImplementacijaSučelja
+    {
+        [TestMethod]
+        public void SortiranjeOsobaPoPrezimenuIImenu()
+        {
+            List<Osoba> osobe = new List<Osoba>();
+            osobe.Add(new Osoba("Žagar", "Ante", new DateTime(1975, 12, 5), "Split"));
+            osobe.Add(new Osoba("Perić", "Pero", new DateTime(1984, 7, 21), "Osijek"));
+            osobe.Add(new Osoba("Perić", "Ante", new DateTime(1992, 3, 17), "Beli Manastir"));
+            osobe.Add(new Osoba("Babaja", "Ante", new DateTime(1989, 9, 25), "Sinj"));
+            osobe.Sort();
+            Assert.AreEqual("Babaja", osobe[0].Prezime);
+            Assert.AreEqual("Perić", osobe[1].Prezime);
+            Assert.AreEqual("Ante", osobe[1].Ime);
+            Assert.AreEqual("Perić", osobe[2].Prezime);
+            Assert.AreEqual("Pero", osobe[2].Ime);
+            Assert.AreEqual("Žagar", osobe[3].Prezime);
+        }
+    }
+}
