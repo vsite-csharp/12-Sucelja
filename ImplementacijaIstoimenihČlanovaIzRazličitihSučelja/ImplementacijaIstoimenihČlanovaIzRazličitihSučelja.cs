@@ -21,19 +21,25 @@ namespace Vsite.CSharp.Sučelja
 
         // TODO:053 Definirati da klasa Desetobojac implementira sučelje ISkokUDalj.U implementaciji metode tog sučelja treba ispisati "Hop u dalj".
         // TODO:054 U metodi Main dodati naredbu koja će pozvati metodu Skoči iz sučelja ISkokUDalj. Pokrenuti program i provjeriti ispise.
-        public class Desetobojac
+        public class Desetobojac : ISkokUvis
         {
             public void Skoči()
             {
+                Console.WriteLine("Hop");
+            }
+
+           void ISkokUvis.Skoči()
+            {
+                Console.WriteLine("Hop u vis");
             }
         }
-
         // TODO:055 Pokrenuti i provjeriti testove (3 testa u grupi "ImplementacijeIstoimenihČlanovaRazličitihSučelja" moraju proći).
 
         static void Main(string[] args)
         {
             Desetobojac db = new Desetobojac();
-
+            db.Skoči();
+            ((ISkokUvis)db).Skoči();
 
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey(true);
