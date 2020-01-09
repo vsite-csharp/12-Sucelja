@@ -2,9 +2,9 @@
 
 namespace Vsite.CSharp.Sučelja
 {
-    // TODO:001 Dopuniti klasu Osoba tako da implementira sučelje IComparable<Osoba> koje će uspoređivati osobe po prezimenu, a ako osobe imaju isto prezime, onda i po imenu. Pokrenuti program i provjeriti ispis.
-    // TODO:002 Pokrenuti testove (test iz grupe "ImplementacijaSučelja" mora proći)
-    public class Osoba
+    // Dopuniti klasu Osoba tako da implementira sučelje IComparable<Osoba> koje će uspoređivati osobe po prezimenu, a ako osobe imaju isto prezime, onda i po imenu. Pokrenuti program i provjeriti ispis.
+    // Pokrenuti testove (test iz grupe "ImplementacijaSučelja" mora proći)
+    public class Osoba : IComparable<Osoba>
     {
         public Osoba(string ime, string prezime, DateTime datumRođenja, string mjestoRođenja)
         {
@@ -13,7 +13,12 @@ namespace Vsite.CSharp.Sučelja
             DatumRođenja = datumRođenja;
             MjestoRođenja = mjestoRođenja;
         }
-
+        public int CompareTo(Osoba other)
+        {
+            if (string.Compare(Prezime, other.Prezime) == 0)
+                return string.Compare(Ime, other.Ime);
+            return string.Compare(Prezime, other.Prezime);
+        }
         public override string ToString()
         {
             return string.Format($"{Ime} {Prezime}, {DatumRođenja.ToShortDateString()}, {MjestoRođenja}");
