@@ -8,7 +8,7 @@ namespace Vsite.CSharp.Sučelja
     {
         static void Main(string[] args)
         {
-            // TODO:040 Provjeriti koja sučelja implementira klasa System.Collections.Generic.Queue<T>:
+            //  Provjeriti koja sučelja implementira klasa System.Collections.Generic.Queue<T>:
             // https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.queue-1
             Queue<string> red = new Queue<string>(new string[] { "Mirko", "Slavko", "Jure" });
 
@@ -33,6 +33,5 @@ namespace Vsite.CSharp.Sučelja
             }
         }
 
-        // TODO:044 Pokrenuti i provjeriti testove (test u grupi "ImplicitnaEksplicitnaPretvorba" mora proći).
     }
 }
