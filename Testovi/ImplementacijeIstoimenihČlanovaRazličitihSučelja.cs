@@ -18,7 +18,7 @@ namespace Vsite.CSharp.Sučelja.Testovi
         public void SkokUDalj()
         {
             ImplementacijaIstoimenihČlanovaIzRazličitihSučelja.Desetobojac d = new ImplementacijaIstoimenihČlanovaIzRazličitihSučelja.Desetobojac();
-            ((ImplementacijaIstoimenihČlanovaIzRazličitihSučelja.ISkokUdalj)d).Skoči();
+            ((ImplementacijaIstoimenihČlanovaIzRazličitihSučelja.ISkokUDalj)d).Skoči();
             Assert.AreEqual("Hop u dalj", cw.GetString());
         }
 
