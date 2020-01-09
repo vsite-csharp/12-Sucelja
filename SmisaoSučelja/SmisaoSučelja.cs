@@ -18,27 +18,33 @@ namespace Vsite.CSharp.Sučelja
 
         public static void SortiranoPoImenu(List<Osoba> osobe)
         {
-            // TODO:010 Koristeći preopterećenu inačicu metode List<T>.Sort(IComparer<T>) abecedno sortirati osobe prema njihovim imenima.
+            //  Koristeći preopterećenu inačicu metode List<T>.Sort(IComparer<T>) abecedno sortirati osobe prema njihovim imenima.
             // https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1
+            osobe.Sort(new UsporedbaOsobaPoImenu());
 
+        }
+
+
+        class UsporedbaOsobaPoImenu : IComparer<Osoba>
+        {
+            public int Compare(Osoba x, Osoba y)
+            {
+                return x.Ime.CompareTo(y.Ime);
+            }
         }
 
         public static void SortiranoPoDatumuRođenja(List<Osoba> osobe)
         {
-            // TODO:011 Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) sortirati osobe prema njihovim datumima rođenja.
+            //  Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) sortirati osobe prema njihovim datumima rođenja.
             // https://docs.microsoft.com/en-us/dotnet/api/system.comparison-1
-
+            osobe.Sort((x, y) => x.DatumRođenja.CompareTo(y.DatumRođenja));
         }
 
         public static void SortiranoPoMjestuRođenja(List<Osoba> osobe)
         {
-            // TODO:012 Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) osobe sortirati prema njihovim mjestima rođenja.
-
+            //  Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) osobe sortirati prema njihovim mjestima rođenja.
+            osobe.Sort((x, y) => x.MjestoRođenja.CompareTo(y.MjestoRođenja));
         }
-
-        // TODO:013 Pokrenuti program i provjeriti ispise.
-
-        // TODO:014 Pokrenuti i provjeriti testove (3 testa u grupi "SmisaoSučelja" moraju proći)
 
         static void Main(string[] args)
         {
