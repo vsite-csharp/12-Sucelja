@@ -18,8 +18,7 @@ namespace Vsite.CSharp.Sučelja
 
 
     
-    // TODO:021 Implementirajte metodu GenerirajMojDogađaj tako da ona generira događaj MojDogađaj
-    // TODO:022 Implementirajte kod za Svojstvo
+    
     class Implementacija : IMojeSučelje
     {
         public string Svojstvo { get => svojstvo; set => svojstvo = value; }
@@ -66,6 +65,5 @@ namespace Vsite.CSharp.Sučelja
             Console.ReadKey(true);
         }
 
-        // TODO:024 Pokrenuti i provjeriti testove (2 testa u grupi "DefinicijaImplementacijaSučelja" moraju proći)
     }
 }
