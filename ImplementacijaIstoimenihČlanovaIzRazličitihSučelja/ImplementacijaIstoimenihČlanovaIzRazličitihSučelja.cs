@@ -30,12 +30,12 @@ namespace Vsite.CSharp.Sučelja
 
             void ISkokUvis.Skoči()
             {
-                Console.WriteLine("Hop u vis!");
+                Console.WriteLine("Hop u vis");
             }
 
             void ISkokUdalj.Skoči()
             {
-                Console.WriteLine("Hop u dalj!");
+                Console.WriteLine("Hop u dalj");
             }
         }
 
