@@ -19,12 +19,14 @@ namespace Vsite.CSharp.Sučelja
         public static void SortiranoPoImenu(List<Osoba> osobe)
         {
             // TODO:010 Koristeći preopterećenu inačicu metode List<T>.Sort(IComparer<T>) abecedno sortirati osobe prema njihovim imenima.
+            // https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1
 
         }
 
         public static void SortiranoPoDatumuRođenja(List<Osoba> osobe)
         {
             // TODO:011 Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) sortirati osobe prema njihovim datumima rođenja.
+            // https://docs.microsoft.com/en-us/dotnet/api/system.comparison-1
 
         }
 
