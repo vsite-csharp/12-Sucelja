@@ -12,7 +12,7 @@ namespace Vsite.CSharp.Sučelja
         {
             try
             {
-                // TODO:000 Pokrenuti program i provjeriti ispis.
+              
 
                 List<Osoba> osobe = new List<Osoba>();
                 osobe.Add(new Osoba("Ante", "Žagar", new DateTime(1975, 12, 5), "Split"));
