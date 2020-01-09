@@ -15,8 +15,7 @@ namespace Vsite.CSharp.Sučelja
         {
         }
 
-
-        // TODO:031 Definirati klasu Izvedena da je izvedena iz klase Bazna te u klasi Izvedena nadglasati (override) metode iz ISučelja. Metoda NevirtualnaMetoda neka vraća "Izvedena.NevirtualnaMetoda", a VirtualnaMetoda neka vraća "Izvedena.VirtualnaMetoda".
+        // TODO:031 Definirati klasu Izvedena da je izvedena iz klase Bazna te u klasi Izvedena implementirati metode iz ISučelja. Metoda NevirtualnaMetoda neka vraća "Izvedena.NevirtualnaMetoda", a VirtualnaMetoda neka vraća "Izvedena.VirtualnaMetoda".
         // TODO:032 Provjeriti poruke o pogreškama ili upozorenja prevoditelja.
         public class Izvedena
         {

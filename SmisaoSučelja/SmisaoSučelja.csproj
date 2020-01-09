@@ -46,9 +46,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\ImplementacijaSučelja\ImplementacijaSučelja.csproj">
       <Project>{16cce0ae-4001-4655-8283-20e908777226}</Project>
       <Name>ImplementacijaSučelja</Name>

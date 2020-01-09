@@ -8,7 +8,8 @@ namespace Vsite.CSharp.Sučelja
     {
         static void Main(string[] args)
         {
-            // TODO:040 Provjeriti koja sučelja implementira klasa System.Collections.Generic.Queue<T>
+            // TODO:040 Provjeriti koja sučelja implementira klasa System.Collections.Generic.Queue<T>:
+            // https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.queue-1
             Queue<string> red = new Queue<string>(new string[] { "Mirko", "Slavko", "Jure" });
 
             // TODO:041 Napisati naredbu koja će pomoću metode Queue<T>.Enqueue() dodati još jedan element u 'red' 
