@@ -13,9 +13,10 @@ namespace Vsite.CSharp.Sučelja
             Queue<string> red = new Queue<string>(new string[] { "Mirko", "Slavko", "Jure" });
 
             // TODO:041 Napisati naredbu koja će pomoću metode Queue<T>.Enqueue() dodati još jedan element u 'red' 
+            red.Enqueue("Pero");//novo dodano
 
             // TODO:042 Proslijediti objekt 'red' metodi IspišiSveElemente():
-
+            IspišiSveElemente(red);
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey(true);
         }
@@ -23,6 +24,7 @@ namespace Vsite.CSharp.Sučelja
         public static void IspišiSveElemente<T>(IEnumerable<T> elementi)
         {
             // TODO:043 Napraviti eksplicitnu pretvorbu proslijeđenog argumenta u ICollection i ispisati broj elemenata.
+            Console.WriteLine(((ICollection)elementi).Count);       //novo dodano
 
             foreach (var e in elementi)
             {
