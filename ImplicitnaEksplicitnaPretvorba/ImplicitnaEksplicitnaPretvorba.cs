@@ -26,6 +26,8 @@ namespace Vsite.CSharp.Sučelja
             Console.WriteLine(((ICollection)elementi).Count);
             foreach (var e in elementi)
             {
+
+
                 Console.WriteLine(e);
             }
         }
