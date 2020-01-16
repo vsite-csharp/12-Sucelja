@@ -4,7 +4,6 @@ namespace Vsite.CSharp.Sučelja
 {
     class TipskiSigurneImplementacije
     {
-        // TODO:060 Dopuniti strukturu Duljina tako da implementira sučelje IComparable i napisati kod za metodu CompareTo.
         public struct Duljina : IComparable , IComparable<Duljina>
         {
             private int duljina;
@@ -30,10 +29,6 @@ namespace Vsite.CSharp.Sučelja
                 return string.Format("{0} m", duljina);
             }
 
-            public int CompareTo(Duljina other)
-            {
-                throw new NotImplementedException();
-            }
         }
 
         public static void Usporedi(Duljina d1, Duljina d2)
@@ -55,13 +50,8 @@ namespace Vsite.CSharp.Sučelja
                 Duljina d2 = new Duljina(1);
                 Usporedi(d1,d2);
 
-                Usporedi(d1, "pero");
+               // Usporedi(d1, "pero");
 
-                // TODO:064 Promijeniti implementaciju sučelja IComparable tako da prevoditelj javi pogrešku na usporedbu strukture Duljina i stringa. Provjeriti javlja li prevoditelj pogrešku.
-
-                // TODO:065 Dopuniti strukturu Duljina tako da implementira i sučelje IComparable<Duljina>. Provjeriti javlja li prevoditelj pogrešku.
-
-                // TODO:066 Pokrenuti i provjeriti testove (3 testa u grupi "TipskiSigurnaImplementacija" moraju proći).
             }
             catch (Exception e)
             {
