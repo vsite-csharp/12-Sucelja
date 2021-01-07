@@ -15,19 +15,27 @@ namespace Vsite.CSharp.Sučelja
         {
             osobe.Sort();
         }
-
-        public static void SortiranoPoImenu(List<Osoba> osobe)
+        class UsporedbaPoImenu : IComparer<Osoba>
         {
-            // TODO:010 Koristeći preopterećenu inačicu metode List<T>.Sort(IComparer<T>) abecedno sortirati osobe prema njihovim imenima.
-            // https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1
-
+            public int Compare(Osoba x, Osoba y)
+            {
+                return  string.Compare(x.Ime, y.Ime, true);
+            }
         }
 
+        
+        public static void SortiranoPoImenu(List<Osoba> osobe)
+        {
+            // Koristeći preopterećenu inačicu metode List<T>.Sort(IComparer<T>) abecedno sortirati osobe prema njihovim imenima.
+            // https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1
+            osobe.Sort(new UsporedbaPoImenu());
+        }
+       
         public static void SortiranoPoDatumuRođenja(List<Osoba> osobe)
         {
-            // TODO:011 Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) sortirati osobe prema njihovim datumima rođenja.
+            //  Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) sortirati osobe prema njihovim datumima rođenja.
             // https://docs.microsoft.com/en-us/dotnet/api/system.comparison-1
-
+            osobe.Sort((o1, o2) => (o1.DatumRođenja - o2.DatumRođenja).Days);
         }
 
         public static void SortiranoPoMjestuRođenja(List<Osoba> osobe)
@@ -36,9 +44,9 @@ namespace Vsite.CSharp.Sučelja
 
         }
 
-        // TODO:013 Pokrenuti program i provjeriti ispise.
+        // Pokrenuti program i provjeriti ispise.
 
-        // TODO:014 Pokrenuti i provjeriti testove (3 testa u grupi "SmisaoSučelja" moraju proći)
+        //  Pokrenuti i provjeriti testove (3 testa u grupi "SmisaoSučelja" moraju proći)
 
         static void Main(string[] args)
         {
