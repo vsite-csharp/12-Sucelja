@@ -16,29 +16,40 @@ namespace Vsite.CSharp.Sučelja
             osobe.Sort();
         }
 
+        class UsporedbaPoImenu : IComparer<Osoba>
+        {
+            public int Compare(Osoba x, Osoba y)
+            {
+                int rezultat = string.Compare(x.Ime, y.Ime, true);
+                return rezultat;
+            }
+        }
+
         public static void SortiranoPoImenu(List<Osoba> osobe)
         {
-            // TODO:010 Koristeći preopterećenu inačicu metode List<T>.Sort(IComparer<T>) abecedno sortirati osobe prema njihovim imenima.
+            // Koristeći preopterećenu inačicu metode List<T>.Sort(IComparer<T>) abecedno sortirati osobe prema njihovim imenima.
             // https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1
+            osobe.Sort(new UsporedbaPoImenu());
 
         }
 
+        
         public static void SortiranoPoDatumuRođenja(List<Osoba> osobe)
         {
-            // TODO:011 Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) sortirati osobe prema njihovim datumima rođenja.
+            // Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) sortirati osobe prema njihovim datumima rođenja.
             // https://docs.microsoft.com/en-us/dotnet/api/system.comparison-1
-
+            osobe.Sort((o1,o2)=>(o1.DatumRođenja-o2.DatumRođenja).Days);
         }
 
         public static void SortiranoPoMjestuRođenja(List<Osoba> osobe)
         {
-            // TODO:012 Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) osobe sortirati prema njihovim mjestima rođenja.
-
+            // Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) osobe sortirati prema njihovim mjestima rođenja.
+            osobe.Sort((o1, o2) => string.Compare(o1.MjestoRođenja, o2.MjestoRođenja));
         }
 
-        // TODO:013 Pokrenuti program i provjeriti ispise.
+        // Pokrenuti program i provjeriti ispise.
 
-        // TODO:014 Pokrenuti i provjeriti testove (3 testa u grupi "SmisaoSučelja" moraju proći)
+        // Pokrenuti i provjeriti testove (3 testa u grupi "SmisaoSučelja" moraju proći)
 
         static void Main(string[] args)
         {
