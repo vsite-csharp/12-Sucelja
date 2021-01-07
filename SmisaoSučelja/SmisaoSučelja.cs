@@ -46,7 +46,7 @@ namespace Vsite.CSharp.Sučelja
 
         //  Pokrenuti program i provjeriti ispise.
 
-        // TODO:014 Pokrenuti i provjeriti testove (3 testa u grupi "SmisaoSučelja" moraju proći)
+        //  Pokrenuti i provjeriti testove (3 testa u grupi "SmisaoSučelja" moraju proći)
 
         static void Main(string[] args)
         {
