@@ -19,9 +19,17 @@ namespace Vsite.CSharp.Sučelja
 
     // TODO:020 Napišite kod klase Implementacija tako da implementira sučelje IMojeSučelje. 
     // TODO:021 Implementirajte metodu GenerirajMojDogađaj tako da ona generira događaj MojDogađaj
-    // TODO:022 Implementirajte kod za Svojstvo
-    class Implementacija
+    // Implementirajte kod za Svojstvo
+    class Implementacija : IMojeSučelje
     {
+        public string Svojstvo { get ; set ; }
+
+        public event MojDelegat MojDogađaj;
+
+        public void GenerirajMojDogađaj()
+        {
+            MojDogađaj?.Invoke(this, EventArgs.Empty);
+        }
     }
 
     class DefinicijaImplementacijaSučelja
@@ -46,8 +54,8 @@ namespace Vsite.CSharp.Sučelja
 
         static void Main(string[] args)
         {
-            // TODO:023 Inicijalizirajte objekt ms instancom objekta Implementacija i provjerite što će se ispisati izvođenjem koda
-            IMojeSučelje ms = null;
+            // Inicijalizirajte objekt ms instancom objekta Implementacija i provjerite što će se ispisati izvođenjem koda
+            IMojeSučelje ms = new Implementacija();
 
             IspišiSvojstvo(ms);
             DigniDogađaj(ms);
