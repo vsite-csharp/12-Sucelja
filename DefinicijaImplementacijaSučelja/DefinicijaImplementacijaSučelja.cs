@@ -22,6 +22,8 @@ namespace Vsite.CSharp.Sučelja
     // TODO:022 Implementirajte kod za Svojstvo
     class Implementacija
     {
+        public string Svojstvo { get; set; }
+        //public event MojDelegat 
     }
 
     class DefinicijaImplementacijaSučelja
