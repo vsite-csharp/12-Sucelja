@@ -40,8 +40,8 @@ namespace Vsite.CSharp.Sučelja
 
         public static void SortiranoPoMjestuRođenja(List<Osoba> osobe)
         {
-            // TODO:012 Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) osobe sortirati prema njihovim mjestima rođenja.
-
+            //  Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) osobe sortirati prema njihovim mjestima rođenja.
+            osobe.Sort((o1, o2) => o1.MjestoRođenja.CompareTo(o2.MjestoRođenja));
         }
 
         // Pokrenuti program i provjeriti ispise.
