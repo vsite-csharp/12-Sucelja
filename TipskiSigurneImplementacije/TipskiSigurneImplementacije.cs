@@ -64,7 +64,7 @@ namespace Vsite.CSharp.Sučelja
 
                 //  Dopuniti strukturu Duljina tako da implementira i sučelje IComparable<Duljina>. Provjeriti javlja li prevoditelj pogrešku.
 
-                // TODO:066 Pokrenuti i provjeriti testove (3 testa u grupi "TipskiSigurnaImplementacija" moraju proći).
+                //  Pokrenuti i provjeriti testove (3 testa u grupi "TipskiSigurnaImplementacija" moraju proći).
             }
             catch (Exception e)
             {
