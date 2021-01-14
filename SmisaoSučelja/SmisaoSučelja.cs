@@ -24,7 +24,7 @@ namespace Vsite.CSharp.Sučelja
 
         public static void SortiranoPoImenu(List<Osoba> osobe)
         {
-            // TODO:010 Koristeći preopterećenu inačicu metode List<T>.Sort(IComparer<T>) abecedno sortirati osobe prema njihovim imenima.
+            //  Koristeći preopterećenu inačicu metode List<T>.Sort(IComparer<T>) abecedno sortirati osobe prema njihovim imenima.
             // https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1
             osobe.Sort();
         }
