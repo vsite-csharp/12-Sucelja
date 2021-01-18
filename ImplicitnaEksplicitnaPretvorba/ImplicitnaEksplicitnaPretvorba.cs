@@ -33,6 +33,6 @@ namespace Vsite.CSharp.Sučelja
             }
         }
 
-        // TODO:044 Pokrenuti i provjeriti testove (test u grupi "ImplicitnaEksplicitnaPretvorba" mora proći).
+        // Pokrenuti i provjeriti testove (test u grupi "ImplicitnaEksplicitnaPretvorba" mora proći).
     }
 }
