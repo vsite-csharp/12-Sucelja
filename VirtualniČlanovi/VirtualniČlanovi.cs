@@ -10,7 +10,7 @@ namespace Vsite.CSharp.Sučelja
             string VirtualnaMetoda();
         }
 
-        // TODO:030 Definirati klasu Bazna tako da implementira sučelje ISučelje. Metoda NevirtualnaMetoda neka vraća "Bazna.NevirtualnaMetoda", a VirtualnaMetoda neka vraća "Bazna.VirtualnaMetoda".
+        // :030 Definirati klasu Bazna tako da implementira sučelje ISučelje. Metoda NevirtualnaMetoda neka vraća "Bazna.NevirtualnaMetoda", a VirtualnaMetoda neka vraća "Bazna.VirtualnaMetoda".
         public class Bazna : ISučelje
         {
             public string NevirtualnaMetoda()
