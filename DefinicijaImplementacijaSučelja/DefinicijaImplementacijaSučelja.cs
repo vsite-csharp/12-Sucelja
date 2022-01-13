@@ -6,6 +6,7 @@ namespace Vsite.CSharp.Sučelja
     interface IMojeSučelje
     {
         // deklaracija (samo potpis) metode:
+        // nema prava pristupa jer se podrazumjeva public
         void GenerirajMojDogađaj();
         // deklaracija svojstva:
         string Svojstvo { set; get; }
