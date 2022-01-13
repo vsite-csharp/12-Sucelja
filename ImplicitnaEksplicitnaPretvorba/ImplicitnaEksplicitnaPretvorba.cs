@@ -14,24 +14,24 @@ namespace Vsite.CSharp.Sučelja
             // https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.queue-1
             Queue<string> red = new Queue<string>(new string[] { "Mirko", "Slavko", "Jure" });
 
-            // TODO:041 Napisati naredbu koja će pomoću metode Queue<T>.Enqueue() dodati još jedan element u 'red' 
-
-            // TODO:042 Proslijediti objekt 'red' metodi IspišiSveElemente():
-
+            // :041 Napisati naredbu koja će pomoću metode Queue<T>.Enqueue() dodati još jedan element u 'red' 
+            red.Enqueue("Ana");
+            // :042 Proslijediti objekt 'red' metodi IspišiSveElemente():
+            IspišiSveElemente(red);
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey(true);
         }
 
         public static void IspišiSveElemente<T>(IEnumerable<T> elementi)
         {
-            // TODO:043 Napraviti eksplicitnu pretvorbu proslijeđenog argumenta u ICollection i ispisati broj elemenata.
-
+            // :043 Napraviti eksplicitnu pretvorbu proslijeđenog argumenta u ICollection i ispisati broj elemenata.
+            Console.WriteLine(((ICollection)elementi).Count);
             foreach (var e in elementi)
             {
                 Console.WriteLine(e);
             }
         }
 
-        // TODO:044 Pokrenuti i provjeriti testove (test u grupi "ImplicitnaEksplicitnaPretvorba" mora proći).
+        // :044 Pokrenuti i provjeriti testove (test u grupi "ImplicitnaEksplicitnaPretvorba" mora proći).
     }
 }
