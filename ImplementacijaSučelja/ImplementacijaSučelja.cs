@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Vsite.CSharp.Sučelja
 {
+
     class ImplementacijaSučelja
     {
         static void Main(string[] args)
@@ -14,7 +16,7 @@ namespace Vsite.CSharp.Sučelja
 
             try
             {
-                // TODO:000 Pokrenuti program i provjeriti ispis.
+                // :000 Pokrenuti program i provjeriti ispis.
                 List<Osoba> osobe = new List<Osoba>();
                 osobe.Add(new Osoba("Ante", "Žagar", new DateTime(1975, 12, 5), "Split"));
                 osobe.Add(new Osoba("Pero", "Perić", new DateTime(1984, 7, 21), "Osijek"));
@@ -32,7 +34,7 @@ namespace Vsite.CSharp.Sučelja
             {
                 Console.WriteLine(e);
             }
- 
+
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey(true);
         }
