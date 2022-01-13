@@ -28,7 +28,8 @@ namespace Vsite.CSharp.Sučelja
 
         public void GenerirajMojDogađaj()
         {
-            
+            _ = MojDogađaj;
+
         }
     }
 
@@ -57,7 +58,7 @@ namespace Vsite.CSharp.Sučelja
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             // 023 Inicijalizirajte objekt ms instancom objekta Implementacija i provjerite što će se ispisati izvođenjem koda
-            IMojeSučelje ms = null;
+            IMojeSučelje ms = new Implementacija();
 
             IspišiSvojstvo(ms);
             DigniDogađaj(ms);
