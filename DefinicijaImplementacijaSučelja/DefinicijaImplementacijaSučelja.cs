@@ -16,7 +16,7 @@ namespace Vsite.CSharp.Sučelja
     // deklaracija delegata
     public delegate void MojDelegat(object sender, EventArgs e);
 
-
+    // Za DZ
     // TODO:020 Napišite kod klase Implementacija tako da implementira sučelje IMojeSučelje. 
     // TODO:021 Implementirajte metodu GenerirajMojDogađaj tako da ona generira događaj MojDogađaj
     // TODO:022 Implementirajte kod za Svojstvo
