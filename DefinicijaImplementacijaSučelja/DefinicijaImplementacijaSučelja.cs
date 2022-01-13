@@ -20,8 +20,16 @@ namespace Vsite.CSharp.Sučelja
     // TODO:020 Napišite kod klase Implementacija tako da implementira sučelje IMojeSučelje. 
     // TODO:021 Implementirajte metodu GenerirajMojDogađaj tako da ona generira događaj MojDogađaj
     // TODO:022 Implementirajte kod za Svojstvo
-    class Implementacija
+    class Implementacija : IMojeSučelje
     {
+        public string Svojstvo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public event MojDelegat MojDogađaj;
+
+        public void GenerirajMojDogađaj()
+        {
+            throw new NotImplementedException();
+        }
     }
 
     class DefinicijaImplementacijaSučelja
