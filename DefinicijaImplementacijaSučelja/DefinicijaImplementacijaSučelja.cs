@@ -68,6 +68,6 @@ namespace Vsite.CSharp.Sučelja
             Console.ReadKey(true);
         }
 
-        // TODO:024 Pokrenuti i provjeriti testove (2 testa u grupi "DefinicijaImplementacijaSučelja" moraju proći)
+        // 024 Pokrenuti i provjeriti testove (2 testa u grupi "DefinicijaImplementacijaSučelja" moraju proći)
     }
 }
