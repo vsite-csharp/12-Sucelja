@@ -50,9 +50,9 @@ namespace Vsite.CSharp.Sučelja
             osobe.Sort((Osoba x, Osoba y)=> x.MjestoRođenja.CompareTo(y.MjestoRođenja));
         }
 
-        // TODO:013 Pokrenuti program i provjeriti ispise.
+        // :013 Pokrenuti program i provjeriti ispise.
 
-        // TODO:014 Pokrenuti i provjeriti testove (3 testa u grupi "SmisaoSučelja" moraju proći)
+        // :014 Pokrenuti i provjeriti testove (3 testa u grupi "SmisaoSučelja" moraju proći)
 
         static void Main(string[] args)
         {
