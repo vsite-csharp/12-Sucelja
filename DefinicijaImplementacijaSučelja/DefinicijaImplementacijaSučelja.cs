@@ -17,11 +17,19 @@ namespace Vsite.CSharp.Sučelja
     public delegate void MojDelegat(object sender, EventArgs e);
 
     // Za DZ
-    // TODO:020 Napišite kod klase Implementacija tako da implementira sučelje IMojeSučelje. 
-    // TODO:021 Implementirajte metodu GenerirajMojDogađaj tako da ona generira događaj MojDogađaj
-    // TODO:022 Implementirajte kod za Svojstvo
-    class Implementacija
+    // :020 Napišite kod klase Implementacija tako da implementira sučelje IMojeSučelje. 
+    // :021 Implementirajte metodu GenerirajMojDogađaj tako da ona generira događaj MojDogađaj
+    // :022 Implementirajte kod za Svojstvo
+    class Implementacija : IMojeSučelje
     {
+        public string Svojstvo { get; set; }
+
+        public event MojDelegat MojDogađaj;
+
+        public void GenerirajMojDogađaj()
+        {
+            MojDogađaj.Invoke(this, EventArgs.Empty);
+        }
     }
 
     class DefinicijaImplementacijaSučelja
@@ -48,8 +56,9 @@ namespace Vsite.CSharp.Sučelja
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            // TODO:023 Inicijalizirajte objekt ms instancom objekta Implementacija i provjerite što će se ispisati izvođenjem koda
-            IMojeSučelje ms = null;
+            // :023 Inicijalizirajte objekt ms instancom objekta Implementacija i provjerite što će se ispisati izvođenjem koda
+            //IMojeSučelje ms = null;
+            IMojeSučelje ms = new Implementacija();
 
             IspišiSvojstvo(ms);
             DigniDogađaj(ms);
@@ -58,6 +67,6 @@ namespace Vsite.CSharp.Sučelja
             Console.ReadKey(true);
         }
 
-        // TODO:024 Pokrenuti i provjeriti testove (2 testa u grupi "DefinicijaImplementacijaSučelja" moraju proći)
+        // :024 Pokrenuti i provjeriti testove (2 testa u grupi "DefinicijaImplementacijaSučelja" moraju proći)
     }
 }
