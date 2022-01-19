@@ -18,8 +18,8 @@ namespace Vsite.CSharp.Sučelja
 
 
     // Napišite kod klase Implementacija tako da implementira sučelje IMojeSučelje. 
-    // TODO:021 Implementirajte metodu GenerirajMojDogađaj tako da ona generira događaj MojDogađaj
-    // TODO:022 Implementirajte kod za Svojstvo
+    // Implementirajte metodu GenerirajMojDogađaj tako da ona generira događaj MojDogađaj
+    // Implementirajte kod za Svojstvo
     class Implementacija : IMojeSučelje
     {
         public string Svojstvo { get; set; }
