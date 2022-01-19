@@ -26,10 +26,10 @@ namespace Vsite.CSharp.Sučelja
 
         //:031 Definirati klasu Izvedena da je izvedena iz klase Bazna te u klasi Izvedena implementirati metode iz ISučelja. Metoda NevirtualnaMetoda neka vraća "Izvedena.NevirtualnaMetoda", a VirtualnaMetoda neka vraća "Izvedena.VirtualnaMetoda".
         //:032 Provjeriti poruke o pogreškama ili upozorenja prevoditelja.
-        public class Izvedena : Bazna
+        public class Izvedena : Bazna, ISučelje
         {
 
-            public string NevirtualnaMetoda()
+            public string  NevirtualnaMetoda()
             {
                 return "Izvedena.NevirtualnaMetoda";
             }

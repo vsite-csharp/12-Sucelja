@@ -26,7 +26,7 @@ namespace Vsite.CSharp.Sučelja
         public static void IspišiSveElemente<T>(IEnumerable<T> elementi)
         {
             //:043 Napraviti eksplicitnu pretvorbu proslijeđenog argumenta u ICollection i ispisati broj elemenata.
-            Console.WriteLine((ICollection)elementi.Count));
+            Console.WriteLine(((ICollection)elementi).Count);
             foreach (var e in elementi)
             {
                 Console.WriteLine(e);

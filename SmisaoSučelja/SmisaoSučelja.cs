@@ -35,7 +35,7 @@ namespace Vsite.CSharp.Sučelja
         {
             //:011 Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) sortirati osobe prema njihovim datumima rođenja.
             // https://docs.microsoft.com/en-us/dotnet/api/system.comparison-1
-            osobe.Sort();
+            osobe.Sort(CompareByDate);
         }
         private static int CompareByDate(Osoba x, Osoba y)
         {
