@@ -31,7 +31,7 @@ namespace Vsite.CSharp.Sučelja
 
             public string  NevirtualnaMetoda()
             {
-                return "Izvedena.NevirtualnaMetoda";
+                return base.NevirtualnaMetoda();
             }
 
             public virtual string VirtualnaMetoda()
