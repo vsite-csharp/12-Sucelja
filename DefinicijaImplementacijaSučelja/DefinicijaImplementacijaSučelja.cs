@@ -54,8 +54,7 @@ namespace Vsite.CSharp.Sučelja
             IspišiSvojstvo(ms);
             DigniDogađaj(ms);
 
-            Console.WriteLine("GOTOVO!!!");
-            Console.ReadKey(true);
+            Console.WriteLine("\nGOTOVO!!!");
         }
 
         // TODO:024 Pokrenuti i provjeriti testove (2 testa u grupi "DefinicijaImplementacijaSučelja" moraju proći)

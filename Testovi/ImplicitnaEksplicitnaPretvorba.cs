@@ -1,22 +1,32 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
+﻿using System.Reflection;
+using OsobaHP = Vsite.CSharp.Sučelja.ImplicitnaEksplicitnaPretvorba.Osoba;
 
 namespace Vsite.CSharp.Sučelja.Testovi
 {
+
     [TestClass]
     public class ImplicitnaEksplicitnaPretvorba : ConsoleTest
     {
         [TestMethod]
-        public void IspisujeBrojElemenataTeSveElemente()
+        public void OsobaImplementiraSučeljaIHodajućiIPlivajući()
         {
-            Queue<int> brojevi = new Queue<int>(new int[] { 1, 3, 5, 7, 9 });
-            Sučelja.ImplicitnaEksplicitnaPretvorba.IspišiSveElemente(brojevi);
-            Assert.AreEqual(6, cw.Count);
-            Assert.AreEqual(5, cw.GetInt());
-            Assert.AreEqual(1, cw.GetInt());
-            Assert.AreEqual(3, cw.GetInt());
-            Assert.AreEqual(5, cw.GetInt());
+            var interfaces = typeof(OsobaHP).GetInterfaces();
+            Assert.IsTrue(interfaces.Contains(typeof(Vsite.CSharp.Sučelja.ImplicitnaEksplicitnaPretvorba.IHodajući)));
+            Assert.IsTrue(interfaces.Contains(typeof(Vsite.CSharp.Sučelja.ImplicitnaEksplicitnaPretvorba.IPlivajući)));
+        }
+
+        [TestMethod]
+        public void RazgibajSveProšećeIRasplivaSve()
+        {
+            var osobe = new List<OsobaHP> { new OsobaHP("Mirko"), new OsobaHP("Slavko"), new OsobaHP("Jure") };
+            Sučelja.ImplicitnaEksplicitnaPretvorba.RazgibajSve(osobe);
+            Assert.AreEqual(6, cw?.Count);
+            Assert.AreEqual("Mirko hoda", cw?.GetString());
+            Assert.AreEqual("Mirko pliva", cw?.GetString());
+            Assert.AreEqual("Slavko hoda", cw?.GetString());
+            Assert.AreEqual("Slavko pliva", cw?.GetString());
+            Assert.AreEqual("Jure hoda", cw?.GetString());
+            Assert.AreEqual("Jure pliva", cw?.GetString());
         }
     }
 }

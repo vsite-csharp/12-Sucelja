@@ -11,7 +11,7 @@ namespace Vsite.CSharp.Sučelja.Testovi
         {
             ImplementacijaIstoimenihČlanovaIzRazličitihSučelja.Desetobojac d = new ImplementacijaIstoimenihČlanovaIzRazličitihSučelja.Desetobojac();
             ((ImplementacijaIstoimenihČlanovaIzRazličitihSučelja.ISkokUvis)d).Skoči();
-            Assert.AreEqual("Hop u vis", cw.GetString());
+            Assert.AreEqual("Hop u vis", cw?.GetString());
         }
 
         [TestMethod]
@@ -19,7 +19,7 @@ namespace Vsite.CSharp.Sučelja.Testovi
         {
             ImplementacijaIstoimenihČlanovaIzRazličitihSučelja.Desetobojac d = new ImplementacijaIstoimenihČlanovaIzRazličitihSučelja.Desetobojac();
             ((ImplementacijaIstoimenihČlanovaIzRazličitihSučelja.ISkokUdalj)d).Skoči();
-            Assert.AreEqual("Hop u dalj", cw.GetString());
+            Assert.AreEqual("Hop u dalj", cw?.GetString());
         }
 
         [TestMethod]
@@ -27,7 +27,7 @@ namespace Vsite.CSharp.Sučelja.Testovi
         {
             ImplementacijaIstoimenihČlanovaIzRazličitihSučelja.Desetobojac d = new ImplementacijaIstoimenihČlanovaIzRazličitihSučelja.Desetobojac();
             d.Skoči();
-            Assert.AreEqual("Hop", cw.GetString());
+            Assert.AreEqual("Hop", cw?.GetString());
         }
     }
 }

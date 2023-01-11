@@ -6,31 +6,69 @@ namespace Vsite.CSharp.Sučelja
 {
     class ImplicitnaEksplicitnaPretvorba
     {
+        // TODO:040 Pogledati definicije sučelja IHodajući i IPlivajući te definiciju klase Osoba.
+        public interface IHodajući
+        {
+            void Hodaj();
+        }
+        public interface IPlivajući
+        {
+            void Plivaj();
+        }
+        public class Osoba : IHodajući
+        {
+            public Osoba(string ime)
+            {
+                Ime = ime;
+            }
+
+            public readonly string Ime;
+
+            public void Hodaj()
+            {
+                Console.WriteLine($"{Ime} hoda");
+            }
+            public void Plivaj()
+            {
+                Console.WriteLine($"{Ime} pliva");
+            }
+        }
+
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            // TODO:040 Provjeriti koja sučelja implementira klasa System.Collections.Generic.Queue<T>:
-            // https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.queue-1
-            Queue<string> red = new Queue<string>(new string[] { "Mirko", "Slavko", "Jure" });
+            var osobe = new List<Osoba> { new Osoba("Mirko"), new Osoba("Slavko"), new Osoba("Jure") };
 
-            // TODO:041 Napisati naredbu koja će pomoću metode Queue<T>.Enqueue() dodati još jedan element u 'red' 
+            Console.WriteLine("Prošećite se!");
+            ProšećiSve(osobe);
 
-            // TODO:042 Proslijediti objekt 'red' metodi IspišiSveElemente():
+            Console.WriteLine("\nRazgibajte se!");
+            RazgibajSve(osobe);
 
-            Console.WriteLine("GOTOVO!!!");
+            Console.WriteLine("\nGOTOVO!!!");
         }
 
-        public static void IspišiSveElemente<T>(IEnumerable<T> elementi)
+        // TODO:041 Pogledati definicije donje dvije metode i zaključiti što će se ispisati pokretanjem programa.
+        // TODO:042 Pokrenuti program i provjeriti ispis. Obrazložiti zašto se u drugoj metodi ne poziva metoda Plivaj.
+        public static void ProšećiSve(IEnumerable<IHodajući> osobe)
         {
-            // TODO:043 Napraviti eksplicitnu pretvorbu proslijeđenog argumenta u ICollection i ispisati broj elemenata.
-
-            foreach (var e in elementi)
+            foreach (var o in osobe)
             {
-                Console.WriteLine(e);
+                o.Hodaj();
             }
         }
 
-        // TODO:044 Pokrenuti i provjeriti testove (test u grupi "ImplicitnaEksplicitnaPretvorba" mora proći).
+        // TODO:043 Napraviti neophodne promjene da bi se u donjoj metodi pozvala metoda Plivaj.
+        public static void RazgibajSve<T>(IEnumerable<T> osobe)
+        {
+            foreach (var o in osobe)
+            {
+                (o as IHodajući)?.Hodaj();
+                (o as IPlivajući)?.Plivaj();
+            }
+        }
+
+        // TODO:044 Pokrenuti i provjeriti testove (dva testa u grupi "ImplicitnaEksplicitnaPretvorba" moraju proći).
     }
 }

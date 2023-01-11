@@ -37,7 +37,7 @@ namespace Vsite.CSharp.Sučelja
             Desetobojac db = new Desetobojac();
 
 
-            Console.WriteLine("GOTOVO!!!");
+            Console.WriteLine("\nGOTOVO!!!");
         }
     }
 }

@@ -33,13 +33,15 @@ namespace Vsite.CSharp.Sučelja
                 Console.WriteLine(e);
             }
  
-            Console.WriteLine("GOTOVO!!!");
+            Console.WriteLine("\nGOTOVO!!!");
         }
 
         static void Ispiši<T>(IEnumerable<T> obilaziv)
         {
             foreach (var e in obilaziv)
+            { 
                 Console.WriteLine(e);
+            }
         }
     }
 }

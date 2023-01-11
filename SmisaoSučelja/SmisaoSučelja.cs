@@ -81,7 +81,7 @@ namespace Vsite.CSharp.Sučelja
                 Console.WriteLine(e);
             }
 
-            Console.WriteLine("GOTOVO!!!");
+            Console.WriteLine("\nGOTOVO!!!");
         }
     }
 }
