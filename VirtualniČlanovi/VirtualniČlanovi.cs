@@ -46,7 +46,6 @@ namespace Vsite.CSharp.Sučelja
             PozoviVirtualnuMetodu(s2);
 
             Console.WriteLine("GOTOVO!!!");
-            Console.ReadKey(true);
         }
 
         // TODO:035 Pokrenuti i provjeriti testove (4 testa u grupi "VirtualniČlanovi" moraju proći).

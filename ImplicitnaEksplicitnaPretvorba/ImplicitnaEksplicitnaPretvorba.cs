@@ -19,7 +19,6 @@ namespace Vsite.CSharp.Sučelja
             // TODO:042 Proslijediti objekt 'red' metodi IspišiSveElemente():
 
             Console.WriteLine("GOTOVO!!!");
-            Console.ReadKey(true);
         }
 
         public static void IspišiSveElemente<T>(IEnumerable<T> elementi)

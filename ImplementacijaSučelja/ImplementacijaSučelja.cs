@@ -15,7 +15,7 @@ namespace Vsite.CSharp.Sučelja
             try
             {
                 // TODO:000 Pokrenuti program i provjeriti ispis.
-                List<Osoba> osobe = new List<Osoba>();
+                var osobe = new List<Osoba>();
                 osobe.Add(new Osoba("Ante", "Žagar", new DateTime(1975, 12, 5), "Split"));
                 osobe.Add(new Osoba("Pero", "Perić", new DateTime(1984, 7, 21), "Osijek"));
                 osobe.Add(new Osoba("Ante", "Perić", new DateTime(1992, 3, 17), "Beli Manastir"));
@@ -34,7 +34,6 @@ namespace Vsite.CSharp.Sučelja
             }
  
             Console.WriteLine("GOTOVO!!!");
-            Console.ReadKey(true);
         }
 
         static void Ispiši<T>(IEnumerable<T> obilaziv)
