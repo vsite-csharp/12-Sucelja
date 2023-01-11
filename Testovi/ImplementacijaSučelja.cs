@@ -1,8 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
-namespace Vsite.CSharp.Sučelja.Testovi
+﻿namespace Vsite.CSharp.Sučelja.Testovi
 {
     [TestClass]
     public class ImplementacijaSučelja

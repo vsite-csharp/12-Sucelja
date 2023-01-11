@@ -54,3 +54,9 @@ u drugo sučelje.
 ImplementacijaIstoimenihČlanovaIzRazličitihSučelja
 --------------------------------------------------
 Primjer kako se implementiraju metode s istim potpisom iz različitih sučelja.
+
+
+PodrazumijevanaImplementacijaSučelja
+--------------------------------------------------
+Primjer kako se unutar sučelja može zadati i definicija metode te kako se onda
+ta metoda može pozvati.

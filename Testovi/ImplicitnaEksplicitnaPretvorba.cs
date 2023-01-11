@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using OsobaHP = Vsite.CSharp.Sučelja.ImplicitnaEksplicitnaPretvorba.Osoba;
+﻿using OsobaHP = Vsite.CSharp.Sučelja.ImplicitnaEksplicitnaPretvorba.Osoba;
 
 namespace Vsite.CSharp.Sučelja.Testovi
 {

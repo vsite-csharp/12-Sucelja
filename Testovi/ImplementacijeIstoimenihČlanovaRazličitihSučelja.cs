@@ -1,7 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace Vsite.CSharp.Sučelja.Testovi
+﻿namespace Vsite.CSharp.Sučelja.Testovi
 {
     [TestClass]
     public class ImplementacijeIstoimenihČlanovaRazličitihSučelja : ConsoleTest

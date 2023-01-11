@@ -20,6 +20,7 @@
     <ProjectReference Include="..\ImplementacijaIstoimenihČlanovaIzRazličitihSučelja\ImplementacijaIstoimenihČlanovaIzRazličitihSučelja.csproj" />
     <ProjectReference Include="..\ImplementacijaSučelja\ImplementacijaSučelja.csproj" />
     <ProjectReference Include="..\ImplicitnaEksplicitnaPretvorba\ImplicitnaEksplicitnaPretvorba.csproj" />
+    <ProjectReference Include="..\PodrazumijevanaImplementacijaSučelja\PodrazumijevanaImplementacijaSučelja.csproj" />
     <ProjectReference Include="..\SmisaoSučelja\SmisaoSučelja.csproj" />
     <ProjectReference Include="..\VirtualniČlanovi\VirtualniČlanovi.csproj" />
   </ItemGroup>
