@@ -6,13 +6,16 @@
         {
             void Hodaj();
         }
-        // TODO:060 U IPlivajući dodati implementaciju metode Plivaj tako da ispiše "On bi i plivo!".
+        // 060 U IPlivajući dodati implementaciju metode Plivaj tako da ispiše "On bi i plivo!".
         public interface IPlivajući
         {
-            void Plivaj();
+            void Plivaj()
+            {
+                Console.WriteLine("On bi i plivao!");
+            }
         }
-        // TODO:061 Deklarirati da klasa osoba implementira sučelje IPlivajući.
-        public class Osoba : IHodajući
+        // 061 Deklarirati da klasa osoba implementira sučelje IPlivajući.
+        public class Osoba : IHodajući, IPlivajući
         {
             public Osoba(string ime)
             {
@@ -33,6 +36,7 @@
 
             var osoba = new Osoba("Slaviša");
             osoba.Hodaj();
+           ((IPlivajući)osoba).Plivaj();
             // TODO:062 Pozvati na osobi metodu Plivaj. Što treba napraviti da bi se ona doista pozvala.
 
             Console.WriteLine("\nGOTOVO!!!");
