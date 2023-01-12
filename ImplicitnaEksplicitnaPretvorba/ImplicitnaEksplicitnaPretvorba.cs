@@ -69,6 +69,6 @@ namespace Vsite.CSharp.Sučelja
             }
         }
 
-        // TODO:044 Pokrenuti i provjeriti testove (dva testa u grupi "ImplicitnaEksplicitnaPretvorba" moraju proći).
+        // 044 Pokrenuti i provjeriti testove (dva testa u grupi "ImplicitnaEksplicitnaPretvorba" moraju proći).
     }
 }
