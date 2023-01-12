@@ -69,5 +69,6 @@ namespace Vsite.CSharp.Sučelja
         }
 
         // TODO:024 Pokrenuti i provjeriti testove (2 testa u grupi "DefinicijaImplementacijaSučelja" moraju proći)
+        //
     }
 }
