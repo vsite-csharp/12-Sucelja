@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Vsite.CSharp.Sučelja
@@ -16,18 +17,26 @@ namespace Vsite.CSharp.Sučelja
             osobe.Sort();
         }
 
+        class SortirajPoImenu : IComparer<Osoba>
+        {
+            public int Compare(Osoba? x, Osoba? y)
+            {
+                return string.Compare(x?.Ime,y?.Ime);
+            }
+        }
+
         public static void SortiranoPoImenu(List<Osoba> osobe)
         {
-            // TODO:010 Koristeći preopterećenu inačicu metode List<T>.Sort(IComparer<T>) abecedno sortirati osobe prema njihovim imenima.
+            // 010 Koristeći preopterećenu inačicu metode List<T>.Sort(IComparer<T>) abecedno sortirati osobe prema njihovim imenima.
             // https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1
-
+            osobe.Sort(new SortirajPoImenu());
         }
 
         public static void SortiranoPoDatumuRođenja(List<Osoba> osobe)
         {
-            // TODO:011 Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) sortirati osobe prema njihovim datumima rođenja.
+            // 011 Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) sortirati osobe prema njihovim datumima rođenja.
             // https://docs.microsoft.com/en-us/dotnet/api/system.comparison-1
-
+            osobe.Sort((o1,o2)=>DateTime.Compare(o1.DatumRođenja,o2.DatumRođenja));
         }
 
         public static void SortiranoPoMjestuRođenja(List<Osoba> osobe)
