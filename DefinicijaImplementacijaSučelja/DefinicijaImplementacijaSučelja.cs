@@ -17,11 +17,22 @@ namespace Vsite.CSharp.Sučelja
     public delegate void MojDelegat(object sender, EventArgs e);
 
 
-    // TODO:020 Napišite kod klase Implementacija tako da implementira sučelje IMojeSučelje. 
-    // TODO:021 Implementirajte metodu GenerirajMojDogađaj tako da ona generira događaj MojDogađaj
-    // TODO:022 Implementirajte kod za Svojstvo
-    class Implementacija
+    //  Napišite kod klase Implementacija tako da implementira sučelje IMojeSučelje. 
+    //  Implementirajte metodu GenerirajMojDogađaj tako da ona generira događaj MojDogađaj
+    //  Implementirajte kod za Svojstvo
+    class Implementacija : IMojeSučelje
     {
+        public string Svojstvo { get ; set ; }
+
+        public event MojDelegat MojDogađaj;
+
+        public void GenerirajMojDogađaj()
+        {
+            if (MojDogađaj!=null)
+            {
+                new MojDogađaj(this, EventArgs)
+            }
+        }
     }
 
     class DefinicijaImplementacijaSučelja
