@@ -16,7 +16,7 @@ namespace Vsite.CSharp.Sučelja
                 Console.WriteLine("On bi i plivao!");
             }
         }
-        // TODO:061 Deklarirati da klasa osoba implementira sučelje IPlivajući.
+        // :061 Deklarirati da klasa osoba implementira sučelje IPlivajući.
         public class Osoba : IHodajući, IPlivajući
         {
             public Osoba(string ime)
