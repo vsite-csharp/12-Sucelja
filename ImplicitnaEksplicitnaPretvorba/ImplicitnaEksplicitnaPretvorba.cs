@@ -59,7 +59,7 @@ namespace Vsite.CSharp.Sučelja
             }
         }
 
-        // TODO:043 Napraviti neophodne promjene da bi se u donjoj metodi pozvala metoda Plivaj.
+        // :043 Napraviti neophodne promjene da bi se u donjoj metodi pozvala metoda Plivaj.
         public static void RazgibajSve<T>(IEnumerable<T> osobe)
         {
             foreach (var o in osobe)
