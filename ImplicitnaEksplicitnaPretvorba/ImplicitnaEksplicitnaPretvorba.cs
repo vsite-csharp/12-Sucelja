@@ -6,7 +6,7 @@ namespace Vsite.CSharp.Sučelja
 {
     class ImplicitnaEksplicitnaPretvorba
     {
-        // TODO:040 Pogledati definicije sučelja IHodajući i IPlivajući te definiciju klase Osoba.
+        //  Pogledati definicije sučelja IHodajući i IPlivajući te definiciju klase Osoba.
         public interface IHodajući
         {
             void Hodaj();
@@ -15,7 +15,7 @@ namespace Vsite.CSharp.Sučelja
         {
             void Plivaj();
         }
-        public class Osoba : IHodajući
+        public class Osoba : IHodajući, IPlivajući
         {
             public Osoba(string ime)
             {
