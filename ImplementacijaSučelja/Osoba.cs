@@ -7,6 +7,10 @@ namespace Vsite.CSharp.Sučelja
     // TODO:002 Pokrenuti testove (test iz grupe "ImplementacijaSučelja" mora proći)
     public class Osoba:IComparable<Osoba>
     {
+        public readonly string Ime;
+        public readonly string Prezime;
+        public readonly DateTime DatumRođenja;
+        public readonly string MjestoRođenja;
         public Osoba(string ime, string prezime, DateTime datumRođenja, string mjestoRođenja)
         {
             Ime = ime;
@@ -27,9 +31,6 @@ namespace Vsite.CSharp.Sučelja
             return compare;
         }
         
-        public readonly string Ime;
-        public readonly string Prezime;
-        public readonly DateTime DatumRođenja;
-        public readonly string MjestoRođenja;
+        
     }
 }
