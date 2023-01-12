@@ -35,6 +35,7 @@ namespace Vsite.CSharp.Sučelja
             // https://docs.microsoft.com/en-us/dotnet/api/system.comparison-1
 
             //osobe.Sort(o1, o2) => DateTime.Compare(o1.DatumRođenja, o2.DatumRođenja));
+            //
         }
 
         public static void SortiranoPoMjestuRođenja(List<Osoba> osobe)
