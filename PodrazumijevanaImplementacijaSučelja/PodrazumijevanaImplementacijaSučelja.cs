@@ -9,10 +9,13 @@
         // TODO:060 U IPlivajući dodati implementaciju metode Plivaj tako da ispiše "On bi i plivo!".
         public interface IPlivajući
         {
-            void Plivaj();
+            void Plivaj()
+            {
+                Console.WriteLine("On bi i plivo!");
+            }
         }
         // TODO:061 Deklarirati da klasa osoba implementira sučelje IPlivajući.
-        public class Osoba : IHodajući
+        public class Osoba : IHodajući,IPlivajući
         {
             public Osoba(string ime)
             {
