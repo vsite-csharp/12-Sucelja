@@ -59,7 +59,7 @@ namespace Vsite.CSharp.Sučelja
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            // TODO:023 Inicijalizirajte objekt ms instancom objekta Implementacija i provjerite što će se ispisati izvođenjem koda
+            // :023 Inicijalizirajte objekt ms instancom objekta Implementacija i provjerite što će se ispisati izvođenjem koda
             IMojeSučelje ms = new Implementacija();
 
 
@@ -69,6 +69,6 @@ namespace Vsite.CSharp.Sučelja
             Console.WriteLine("\nGOTOVO!!!");
         }
 
-        // TODO:024 Pokrenuti i provjeriti testove (2 testa u grupi "DefinicijaImplementacijaSučelja" moraju proći)
+        // :024 Pokrenuti i provjeriti testove (2 testa u grupi "DefinicijaImplementacijaSučelja" moraju proći)
     }
 }
