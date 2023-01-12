@@ -66,6 +66,7 @@ namespace Vsite.CSharp.Sučelja
             Console.WriteLine("\nGOTOVO!!!");
         }
 
-        // TODO:035 Pokrenuti i provjeriti testove (4 testa u grupi "VirtualniČlanovi" moraju proći).
+        // :035 Pokrenuti i provjeriti testove (4 testa u grupi "VirtualniČlanovi" moraju proći).
+        //
     }
 }
