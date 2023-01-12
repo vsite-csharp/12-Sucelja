@@ -37,7 +37,7 @@ namespace Vsite.CSharp.Sučelja
             }
         }
 
-        // TODO:055 Pokrenuti i provjeriti testove (3 testa u grupi "ImplementacijeIstoimenihČlanovaRazličitihSučelja" moraju proći).
+        // :055 Pokrenuti i provjeriti testove (3 testa u grupi "ImplementacijeIstoimenihČlanovaRazličitihSučelja" moraju proći).
 
         static void Main(string[] args)
         {
