@@ -30,7 +30,7 @@ namespace Vsite.CSharp.Sučelja
         {
             if (MojDogađaj!=null)
             {
-                new MojDogađaj(this, EventArgs)
+                new MojDogađaj(this, EventArgs);
             }
         }
     }

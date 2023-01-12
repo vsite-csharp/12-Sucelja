@@ -14,17 +14,27 @@ namespace Vsite.CSharp.Sučelja
             void Skoči();
         }
 
-        // TODO:050 U implementaciju metode Skoči u klasi Desetobojac napisati naredbu koja će ispisati "Hop". U metodi Main pozvati tu metodu, pokrenuti program i provjeriti ispis.
+        //  U implementaciju metode Skoči u klasi Desetobojac napisati naredbu koja će ispisati "Hop". U metodi Main pozvati tu metodu, pokrenuti program i provjeriti ispis.
 
-        // TODO:051 Definirati da klasa Desetobojac implementira sučelje ISkokUvis. U implementaciji metode tog sučelja treba ispisati "Hop u vis".
-        // TODO:052 U metodi Main dodati naredbu koja će pozvati metodu Skoči iz sučelja ISkokUVis. Pokrenuti program i provjeriti ispise.
+        //  Definirati da klasa Desetobojac implementira sučelje ISkokUvis. U implementaciji metode tog sučelja treba ispisati "Hop u vis".
+        //  U metodi Main dodati naredbu koja će pozvati metodu Skoči iz sučelja ISkokUVis. Pokrenuti program i provjeriti ispise.
 
-        // TODO:053 Definirati da klasa Desetobojac implementira sučelje ISkokUDalj.U implementaciji metode tog sučelja treba ispisati "Hop u dalj".
+        //  Definirati da klasa Desetobojac implementira sučelje ISkokUDalj.U implementaciji metode tog sučelja treba ispisati "Hop u dalj".
         // TODO:054 U metodi Main dodati naredbu koja će pozvati metodu Skoči iz sučelja ISkokUDalj. Pokrenuti program i provjeriti ispise.
-        public class Desetobojac
+        public class Desetobojac : ISkokUvis, ISkokUdalj
         {
             public void Skoči()
             {
+                Console.WriteLine("hop");
+            }            
+            void ISkokUvis.Skoči()
+            {
+                Console.WriteLine("hop u vis");
+            }
+
+            void ISkokUdalj.Skoči()
+            {
+                Console.WriteLine("hop u DALJ");
             }
         }
 
@@ -35,8 +45,10 @@ namespace Vsite.CSharp.Sučelja
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             Desetobojac db = new Desetobojac();
-
-
+            db.Skoči();
+            ISkokUvis suv = db;
+            suv.Skoči();
+            ((ISkokUdalj)db).Skoči();
             Console.WriteLine("\nGOTOVO!!!");
         }
     }
