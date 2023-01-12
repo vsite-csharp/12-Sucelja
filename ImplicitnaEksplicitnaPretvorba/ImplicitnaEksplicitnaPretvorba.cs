@@ -15,7 +15,7 @@ namespace Vsite.CSharp.Sučelja
         {
             void Plivaj();
         }
-        public class Osoba : IHodajući
+        public class Osoba : IHodajući,IPlivajući
         {
             public Osoba(string ime)
             {
