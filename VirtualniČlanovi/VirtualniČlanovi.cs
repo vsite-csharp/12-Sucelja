@@ -33,7 +33,7 @@ namespace Vsite.CSharp.Sučelja
                 return "Izvedena.NevirtualnaMetoda";
             }
 
-            public virtual string VirtualnaMetoda()
+            public override string VirtualnaMetoda()
             {
                 return "Izvedena.VirtualnaMetoda";
             }
