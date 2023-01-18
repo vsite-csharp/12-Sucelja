@@ -11,7 +11,7 @@
         {
             void Plivaj()
             {
-                Console.WriteLine("On bi i plivao");
+                Console.WriteLine("On bi i plivo!");
             }
         }
         //  Deklarirati da klasa osoba implementira sučelje IPlivajući.

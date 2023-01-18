@@ -22,16 +22,13 @@ namespace Vsite.CSharp.Sučelja
     //  Implementirajte kod za Svojstvo
     class Implementacija : IMojeSučelje
     {
-        public string Svojstvo { get ; set ; }
+        public string Svojstvo { get; set; }
 
         public event MojDelegat MojDogađaj;
 
         public void GenerirajMojDogađaj()
         {
-            if (MojDogađaj!=null)
-            {
-                new MojDogađaj(this, EventArgs);
-            }
+            MojDogađaj?.Invoke(this, EventArgs.Empty);
         }
     }
 

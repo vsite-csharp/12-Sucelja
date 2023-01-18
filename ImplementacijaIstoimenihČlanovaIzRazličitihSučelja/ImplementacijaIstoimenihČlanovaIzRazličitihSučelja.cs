@@ -25,16 +25,16 @@ namespace Vsite.CSharp.Sučelja
         {
             public void Skoči()
             {
-                Console.WriteLine("hop");
+                Console.WriteLine("Hop");
             }            
             void ISkokUvis.Skoči()
             {
-                Console.WriteLine("hop u vis");
+                Console.WriteLine("Hop u vis");
             }
 
             void ISkokUdalj.Skoči()
             {
-                Console.WriteLine("hop u DALJ");
+                Console.WriteLine("Hop u dalj");
             }
         }
 
