@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Vsite.CSharp.Sučelja
+﻿namespace Vsite.CSharp.Sučelja
 {
     class SmisaoSučelja
     {
         static void Ispiši(List<Osoba> list)
         {
             foreach (Osoba o in list)
+            {
                 Console.WriteLine(o);
+            }
         }
 
         public static void SortiranoPoNečemu(List<Osoba> osobe)

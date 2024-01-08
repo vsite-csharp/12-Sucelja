@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-
-namespace Vsite.CSharp.Sučelja
+﻿namespace Vsite.CSharp.Sučelja
 {
     class ImplicitnaEksplicitnaPretvorba
     {

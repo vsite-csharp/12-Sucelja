@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Vsite.CSharp.Sučelja
+﻿namespace Vsite.CSharp.Sučelja
 {
-    class ImplementacijaIstoimenihČlanovaIzRazličitihSučelja
+    internal class ImplementacijaIstoimenihČlanovaIzRazličitihSučelja
     {
         public interface ISkokUvis
         {
@@ -30,7 +28,7 @@ namespace Vsite.CSharp.Sučelja
 
         // TODO:055 Pokrenuti i provjeriti testove (3 testa u grupi "ImplementacijeIstoimenihČlanovaRazličitihSučelja" moraju proći).
 
-        static void Main(string[] args)
+        static void Main()
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 

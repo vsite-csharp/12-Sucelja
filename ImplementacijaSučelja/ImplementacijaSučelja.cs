@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Vsite.CSharp.Sučelja
 {
-    class ImplementacijaSučelja
+    internal static class ImplementacijaSučelja
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.OutputEncoding = Encoding.UTF8;
 

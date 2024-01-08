@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Vsite.CSharp.Sučelja
+﻿namespace Vsite.CSharp.Sučelja
 {
     // definicija sučelja:
     interface IMojeSučelje
@@ -24,7 +22,7 @@ namespace Vsite.CSharp.Sučelja
     {
     }
 
-    class DefinicijaImplementacijaSučelja
+    internal static class DefinicijaImplementacijaSučelja
     {
         // metode kao argument ne primaju konkretne tipove nego sučelja! 
         static void IspišiSvojstvo(IMojeSučelje ms)
@@ -44,15 +42,15 @@ namespace Vsite.CSharp.Sučelja
             Console.WriteLine("Događaj obrađen!");
         }
 
-        static void Main(string[] args)
+        static void Main()
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             // TODO:023 Inicijalizirajte objekt ms instancom objekta Implementacija i provjerite što će se ispisati izvođenjem koda
-            IMojeSučelje ms = null;
+            IMojeSučelje? ms = null;
 
-            IspišiSvojstvo(ms);
-            DigniDogađaj(ms);
+            IspišiSvojstvo(ms!);
+            DigniDogađaj(ms!);
 
             Console.WriteLine("\nGOTOVO!!!");
         }

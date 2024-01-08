@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Vsite.CSharp.Sučelja
+﻿namespace Vsite.CSharp.Sučelja
 {
-    class VirtualniČlanovi
+    internal class VirtualniČlanovi
     {
         public interface ISučelje
         {
@@ -31,19 +29,19 @@ namespace Vsite.CSharp.Sučelja
             Console.WriteLine(sučelje.VirtualnaMetoda());
         }
 
-        static void Main(string[] args)
+        static void Main()
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             // TODO:033 Inicijalizirati objekt instancom klase Bazna te provjeriti ispis
-            ISučelje s1 = null;
-            PozoviNevirtualnuMetodu(s1);
-            PozoviVirtualnuMetodu(s1);
+            ISučelje? s1 = null;
+            PozoviNevirtualnuMetodu(s1!);
+            PozoviVirtualnuMetodu(s1!);
 
             // TODO:034 Inicijalizirati objekt instancom klase Izvedena te provjeriti ispis
-            ISučelje s2 = null;
-            PozoviNevirtualnuMetodu(s2);
-            PozoviVirtualnuMetodu(s2);
+            ISučelje? s2 = null;
+            PozoviNevirtualnuMetodu(s2!);
+            PozoviVirtualnuMetodu(s2!);
 
             Console.WriteLine("\nGOTOVO!!!");
         }
