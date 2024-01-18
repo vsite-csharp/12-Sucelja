@@ -11,7 +11,7 @@
         {
             void Plivaj();
         }
-        public class Osoba : IHodajući
+        public class Osoba : IHodajući , IPlivajući
         {
             public Osoba(string ime)
             {
@@ -45,8 +45,8 @@
             Console.WriteLine("\nGOTOVO!!!");
         }
 
-        // TODO:041 Pogledati definicije donje dvije metode i zaključiti što će se ispisati pokretanjem programa.
-        // TODO:042 Pokrenuti program i provjeriti ispis. Obrazložiti zašto se u drugoj metodi ne poziva metoda Plivaj.
+        // :041 Pogledati definicije donje dvije metode i zaključiti što će se ispisati pokretanjem programa.
+        // :042 Pokrenuti program i provjeriti ispis. Obrazložiti zašto se u drugoj metodi ne poziva metoda Plivaj.
         public static void ProšećiSve(IEnumerable<IHodajući> osobe)
         {
             foreach (var o in osobe)
