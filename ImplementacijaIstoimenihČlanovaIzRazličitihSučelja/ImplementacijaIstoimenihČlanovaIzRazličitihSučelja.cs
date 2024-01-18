@@ -19,10 +19,19 @@
 
         // TODO:053 Definirati da klasa Desetobojac implementira sučelje ISkokUDalj.U implementaciji metode tog sučelja treba ispisati "Hop u dalj".
         // TODO:054 U metodi Main dodati naredbu koja će pozvati metodu Skoči iz sučelja ISkokUDalj. Pokrenuti program i provjeriti ispise.
-        public class Desetobojac
+        public class Desetobojac : ISkokUvis, ISkokUdalj
         {
-            public void Skoči()
+             public void Skoči()
             {
+              Console.WriteLine("Hop");
+            }
+            void ISkokUvis.Skoči()
+            {
+                Console.WriteLine("Hop u vis");
+            }
+            void ISkokUdalj.Skoči() 
+            {
+                Console.WriteLine("Hop u dalj");
             }
         }
 
@@ -33,7 +42,9 @@
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             Desetobojac db = new Desetobojac();
-
+            db.Skoči();
+            ((ISkokUvis)db).Skoči();
+            ((ISkokUdalj)db).Skoči();
 
             Console.WriteLine("\nGOTOVO!!!");
         }
