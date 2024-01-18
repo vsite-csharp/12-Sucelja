@@ -11,7 +11,7 @@
         {
             void Plivaj();
         }
-        public class Osoba : IHodajući
+        public class Osoba : IHodajući, IPlivajući
         {
             public Osoba(string ime)
             {
@@ -61,6 +61,7 @@
             foreach (var o in osobe)
             {
                 (o as IHodajući)?.Hodaj();
+                
                 (o as IPlivajući)?.Plivaj();
             }
         }
