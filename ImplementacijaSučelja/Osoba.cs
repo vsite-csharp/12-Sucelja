@@ -33,7 +33,7 @@
             return string.Compare(Ime, other.Ime);
         }
     }   
-    {
+    
         public Osoba(string ime, string prezime, DateTime datumRođenja, string mjestoRođenja)
         {
             Ime = ime;
@@ -53,3 +53,4 @@
         public readonly string MjestoRođenja;
     }
 }
+
