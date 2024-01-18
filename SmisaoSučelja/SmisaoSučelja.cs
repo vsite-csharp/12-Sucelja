@@ -1,4 +1,6 @@
-﻿namespace Vsite.CSharp.Sučelja
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace Vsite.CSharp.Sučelja
 {
     class SmisaoSučelja
     {
@@ -19,6 +21,7 @@
         {
             // TODO:010 Koristeći preopterećenu inačicu metode List<T>.Sort(IComparer<T>) abecedno sortirati osobe prema njihovim imenima.
             // https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1
+            //osobe.Sort(new UsporediOsobePoImenu());
 
         }
 
@@ -26,13 +29,14 @@
         {
             // TODO:011 Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) sortirati osobe prema njihovim datumima rođenja.
             // https://docs.microsoft.com/en-us/dotnet/api/system.comparison-1
+            osobe.Sort((osobaA, osobaB) => osobaA.DatumRođenja.CompareTo(osobaB.DatumRođenja));
 
         }
 
         public static void SortiranoPoMjestuRođenja(List<Osoba> osobe)
         {
             // TODO:012 Koristeći preopterećenu inačicu metode List<T>.Sort(Comparison<T>) osobe sortirati prema njihovim mjestima rođenja.
-
+            osobe.Sort((osobaA, osobaB) => string.Compare(osobaA.MjestoRođenja, osobaB.MjestoRođenja));
         }
 
         // TODO:013 Pokrenuti program i provjeriti ispise.

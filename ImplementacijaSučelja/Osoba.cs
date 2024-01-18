@@ -21,5 +21,6 @@
         public readonly string Prezime;
         public readonly DateTime DatumRođenja;
         public readonly string MjestoRođenja;
+        //public UsporediOsobePoImenu()
     }
 }
