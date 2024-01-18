@@ -24,7 +24,7 @@ namespace Vsite.CSharp.Sučelja
             int rez = string.Compare(Prezime, other!.Prezime);
             if (rez != 0)
             {
-                return 0;
+                return rez;
             }
 
             return string.Compare(Ime, other!.Ime);
