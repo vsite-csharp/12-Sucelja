@@ -2,7 +2,7 @@
 {
     class ImplicitnaEksplicitnaPretvorba
     {
-        // TODO:040 Pogledati definicije sučelja IHodajući i IPlivajući te definiciju klase Osoba.
+        // 040 Pogledati definicije sučelja IHodajući i IPlivajući te definiciju klase Osoba.
         public interface IHodajući
         {
             void Hodaj();
