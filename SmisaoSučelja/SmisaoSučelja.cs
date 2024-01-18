@@ -16,12 +16,19 @@ namespace Vsite.CSharp.Sučelja
         {
             osobe.Sort();
         }
+        class UsporediOsobePoImenu: IComparer<Osoba>
+        {
+            public int Compare(Osoba? x,Osoba? y)
+            {
+                return string.Compare(x!.Ime, y!.Ime);
+            }
+        }
 
         public static void SortiranoPoImenu(List<Osoba> osobe)
         {
             // TODO:010 Koristeći preopterećenu inačicu metode List<T>.Sort(IComparer<T>) abecedno sortirati osobe prema njihovim imenima.
             // https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1
-            //osobe.Sort(new UsporediOsobePoImenu());
+            osobe.Sort(new UsporediOsobePoImenu());
 
         }
 
